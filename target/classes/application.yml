@@ -1,0 +1,42 @@
+server:
+  port: 8088
+
+#logging:
+#  level:
+#    org.springframework: DEBUG
+
+spring:
+  messages:
+    basename: messages
+#  #시큐리티 설정
+#  security:
+#    user:
+#      name: username
+#      password: passw0rd
+  #스웨거 설정
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+
+  #jpa 설정
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+       ddl-auto: create
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+
+#Spring actuator 설정
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
