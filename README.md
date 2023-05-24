@@ -1,1 +1,1 @@
-rest api 및 jpa 기본 공부
+rest api 및 jpa 를 활용한 CRUD 
